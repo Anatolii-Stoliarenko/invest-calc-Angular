@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from "@angular/core";
+
+import { InvestmentService } from "../investment.service";
 
 @Component({
-  selector: 'app-investment-result',
-  standalone: true,
-  imports: [],
-  templateUrl: './investment-result.component.html',
-  styleUrl: './investment-result.component.css'
+  selector: "app-investment-result",
+  templateUrl: "./investment-result.component.html",
+  styleUrl: "./investment-result.component.css",
 })
 export class InvestmentResultComponent {
+  private investService = inject(InvestmentService);
 
+  get results() {
+    return this.investService.results;
+  }
 }
