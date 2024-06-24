@@ -11,10 +11,10 @@ import { InvestmentService } from "../investment.service";
 export class UserInputComponent {
   investService = inject(InvestmentService);
 
-  enteredInitialInvestment = "1";
-  enteredAnnualInvestment = "2";
-  enteredExpectedReturn = "3";
-  enteredDuration = "10";
+  enteredInitialInvestment = "0";
+  enteredAnnualInvestment = "0";
+  enteredExpectedReturn = "0";
+  enteredDuration = "0";
 
   onSubmit() {
     const data: InvestementInput = {
